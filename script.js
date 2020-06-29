@@ -52,20 +52,23 @@ function playRound(playerSelection, computerSelection){
 const rock = document.querySelector ('#rock');
 
 rock.addEventListener('click', () => {
-    const newLocal = computerSelection;
+    computerPlay();
+    const newLocal = computerPlay();
     playRound('ROCK', newLocal);
 });
 
 const paper = document.querySelector ('#paper');
 
 paper.addEventListener('click', () => {
-    const newLocal = computerSelection;
+    computerPlay();
+    const newLocal = computerPlay();
     playRound('PAPER', newLocal);
 });
 
 const scissors = document.querySelector ('#scissors');
 
 scissors.addEventListener('click', () => {
-    const newLocal = computerSelection;
+    computerPlay();
+    const newLocal = computerPlay();
     playRound('SCISSORS', newLocal);
 });
