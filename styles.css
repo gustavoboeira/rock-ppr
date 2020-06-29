@@ -3,3 +3,15 @@
     top: 35%;
     left: 40%;
 }
+
+#rock {
+    size: 10px;
+}
+
+#paper {
+    size: 10px;
+}
+
+#scissors {
+    size: 10px;
+}
