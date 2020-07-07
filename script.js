@@ -8,45 +8,54 @@ function computerPlay(){
         return 'PAPER';
     else if(play == 3)
         return 'SCISSORS';
-
 }
+
 let computerSelection = computerPlay();
 let playerSelection;
 let i;
 let j = 0; //counter of victories for the player
 let k = 0; // counter of victories for the computer
+const results = document.querySelector("#results");
+const scoreboard = document.querySelector("#scoreboard");
+
 
 function playRound(playerSelection, computerSelection){
     if(playerSelection == 'ROCK' && computerSelection == 'SCISSORS'){
         j++;
-        console.log('Rock beats scissors, you win!');
+        results.innerHTML = 'Rock beats scissors, you win!';
+        scoreboard.innerHTML = j + ' x ' + k;
     }
     else if(playerSelection == 'ROCK' && computerSelection == 'PAPER'){
         k++;
-        console.log('Paper beats rock, you lose!');    
+        results.innerHTML = 'Paper beats rock, you lose!';  
+        scoreboard.innerHTML = j + ' x ' + k;  
     }
     else if(playerSelection == 'ROCK' && computerSelection == 'ROCK')
-        console.log('Draw!');
+        results.innerHTML = 'Draw!';
     else if(playerSelection == 'PAPER' && computerSelection == 'ROCK'){
         j++;
-        console.log('Paper beats rock, you win!');
+        results.innerHTML = 'Paper beats rock, you win!';
+        scoreboard.innerHTML = j + ' x ' + k;
     }
     else if(playerSelection == 'PAPER' && computerSelection == 'SCISSORS'){
         k++;
-        console.log ('Scissors beats paper, you lose!');
+        results.innerHTML = 'Scissors beats paper, you lose!';
+        scoreboard.innerHTML = j + ' x ' + k;
     }
     else if(playerSelection == 'PAPER' && computerSelection == 'PAPER')
-        console.log ('Draw');
+        results.innerHTML = 'Draw';
     else if(playerSelection == 'SCISSORS' && computerSelection == 'PAPER'){
         j++;
-        console.log ('Scissors beats paper, you win!');
+        results.innerHTML = 'Scissors beats paper, you win!';
+        scoreboard.innerHTML = j + ' x ' + k;
     }
     else if(playerSelection == 'SCISSORS' && computerSelection == 'ROCK'){
         k++;
-        console.log ('Rock beats scissors, you lose!');
+        results.innerHTML = 'Rock beats scissors, you lose!';
+        scoreboard.innerHTML = j + ' x ' + k;
     }
     else if(playerSelection == 'SCISSORS' && computerSelection == 'SCISSORS')
-        console.log ('Draw');
+        results.innerHTML = 'Draw';
 }
 
 const rock = document.querySelector ('#rock');
@@ -72,3 +81,4 @@ scissors.addEventListener('click', () => {
     const newLocal = computerPlay();
     playRound('SCISSORS', newLocal);
 });
+

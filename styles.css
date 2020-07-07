@@ -1,7 +1,17 @@
+html {
+    background-color: #6884b3;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    left: 29%;
+}
+
 #buttons {
     position: fixed;
-    top: 35%;
-    left: 40%;
+    top: 28%;
+    left: 37%;
 }
 
 #rock {
@@ -14,4 +24,18 @@
 
 #scissors {
     size: 10px;
+}
+
+#results {
+    position: fixed;
+    top: 40%;
+    left: 35.5%;
+    width: 25%;
+}
+
+#scoreboard {
+    position: fixed;
+    top: 43%;
+    left: 35.5%;
+    width: 25%;
 }
